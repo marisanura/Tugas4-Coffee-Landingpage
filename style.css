@@ -248,6 +248,11 @@ body {
   border-radius: 12px;
 }
 
+.btn-coffee {
+  color: white;
+  background-color: var(--light-brown);
+}
+
 /* Footer */
 .footer-coffee {
     background-color: var(--dark-coffee);
