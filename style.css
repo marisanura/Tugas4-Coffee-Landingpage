@@ -1,0 +1,255 @@
+:root {
+    --primary-brown: #4a3427;
+    --light-brown: #c5a880;
+    --bg-grey: #e8e8e8;
+    --dark-coffee: #3b241b;
+    --light-coffee: #e5b986;
+    --text-muted: #6c757d;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  padding-right: 30px;
+}
+.navbar-nav a:hover {
+  color: white;
+  background-color: #4a3427;
+  border-radius: 7px;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  .hero-section {
+    padding-top: 120px; 
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  background: #dcdcdc url('https://www.transparenttextures.com/patterns/pinstripe.png');/* Efek tekstur kertas */
+  min-height: 100vh;
+  height: auto;
+  padding-top: 100px;
+  padding-left: 65px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.hero-title {
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 1;
+}
+.hero-title span {
+  color: #000;
+}
+.coffee-repeat p {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 0.9;
+  margin: 0;
+  opacity: 0.7;
+  padding-left: 170px;
+}
+.bg-text-coffee {
+  position: absolute;
+  font-size: 11rem;
+  font-weight: 900;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  letter-spacing: -5px;
+}
+.main-img {
+  position: relative;
+  z-index: 2;
+  max-height: 1000px;
+}
+
+/* Product Section */
+.menu .menubtn{
+  text-decoration: none;
+  color: #999;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.product-main-img {
+  max-width: 350px;
+  filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.2));
+}
+
+/* Quantity & Button */
+.quantity-picker {
+  background: var(--dark-coffee);
+  color: #fff;
+  border-radius: 5px;
+}
+.quantity-picker button {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 5px 15px;
+}
+.quantity-picker span {
+  padding: 0 10px;
+  width: 40px;
+}
+.add-cart-btn {
+  background-color: var(--light-brown);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+#toast {
+  position: fixed;
+  bottom:20px;
+  right:20px;
+  background:#333;
+  color:white;
+  padding:10px;
+  border-radius:10px;
+  opacity:0;
+  transition:.3s;}
+#toast.show {
+  opacity:1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2rem; }
+  .coffee-repeat p { font-size: 2rem; padding-left: 85px; line-height: 1.1;}
+  .hero-image-container { padding-right: 80px; }
+  .bg-text-coffee { font-size: 7rem; padding-right: 70px;}
+  .hero-section { height: auto; padding-bottom: 50px; }
+}
+
+/* Feature Cards */
+.feature-card {
+  padding: 40px;
+  border-radius: 15px;
+  transition: transform 0.3s;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.6s ease;
+}
+.feature-card.dark { 
+  background-color: var(--dark-coffee);
+  color: white;
+}
+.feature-card.light {
+  background-color: var(--light-brown);
+  color: black;
+}
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Product Card Styling */
+/* Premium Card */
+.premium-card {
+  position: relative;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.premium-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  border-radius: 10px;
+}
+
+/* Image zoom */
+.premium-card img {
+  transition: transform 0.4s ease;
+}
+
+.premium-card:hover img {
+  transform: scale(1.1) rotate(-2deg);
+}
+
+/* Badge */
+.badge-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--light-brown);
+  color: white;
+  padding: 5px 12px;
+  font-size: 0.7rem;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+/* Premium Button */
+.premium-btn {
+  background: var(--dark-coffee);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+/* Hover tombol */
+.premium-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Klik efek (modern tap effect) */
+.premium-btn:active {
+  transform: scale(0.92);
+}
+
+/* Ripple effect */
+.premium-btn::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.4s;
+}
+
+.premium-btn:active::after {
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+}
+
+/* Newsletter */
+.newsletter-form input {
+  background-color: #ffffff;
+  border: none;
+  padding: 15px;
+}
+.newsletter-form {
+  background-color: var(--dark-coffee);
+  padding: 15px;
+  border-radius: 12px;
+}
+
+/* Footer */
+.footer-coffee {
+    background-color: var(--dark-coffee);
+    color: white;
+}
