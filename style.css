@@ -247,10 +247,9 @@ body {
   padding: 15px;
   border-radius: 12px;
 }
-
-.btn-coffee {
-  color: white;
-  background-color: var(--light-brown);
+.newsletter-form button {
+    color: white;
+    background-color: var(--light-brown);
 }
 
 /* Footer */
